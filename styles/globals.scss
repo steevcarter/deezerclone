@@ -1,0 +1,50 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: rgb(24, 130, 156);
+  --darkBlue: rgb(5, 105, 172);
+  --transparentBlue: rgba(24, 130, 156, 0.75);
+  --white: hsla(244, 0%, 100%, 0.9);
+  --transparentWhite: hsla(0, 0%, 100%, 0.25);
+  --transparentWhiteActive: hsla(0, 100%, 100%, 0.5);
+
+  --text-header: 2rem;
+  --text-big: 1.6rem;
+  --text-medium: 1.4rem;
+  --text-small: 1.2rem;
+
+  @media screen and (min-width: 768px) {
+    --text-header: 2.2rem;
+    --text-big: 1.8rem;
+    --text-medium: 1.6rem;
+    --text-small: 1.4rem;
+  }
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
