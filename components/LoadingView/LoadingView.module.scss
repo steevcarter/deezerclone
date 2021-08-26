@@ -1,0 +1,39 @@
+@keyframes pulse {
+  from {
+    transform: translateY(0em);
+  }
+  to {
+    transform: translateY(1rem);
+  }
+}
+
+.loadingWrapper {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--transparentBlue);
+}
+
+.blob {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--darkBlue);
+  border-radius: 50%;
+  animation: pulse 0.25s infinite alternate;
+  z-index: 1;
+
+  &:nth-child(2) {
+    margin: 0 0.5rem;
+    animation-delay: 0.125s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.25s;
+  }
+}

@@ -1,0 +1,36 @@
+.progressBar {
+  height: 1rem;
+  border-radius: 50px;
+  background: var(--white);
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: 50px;
+  background: black;
+}
+
+.currentTime {
+  position: absolute;
+  left: 1rem;
+  top: calc(100% + 1rem);
+  font-size: var(--text-small);
+  color: white;
+}
+
+.duration {
+  font-size: var(--text-small);
+  position: absolute;
+  right: 1rem;
+  top: calc(100% + 1rem);
+  color: white;
+}

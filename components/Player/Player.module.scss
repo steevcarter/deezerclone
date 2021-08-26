@@ -1,0 +1,67 @@
+.playerWrapper {
+  width: 100%;
+  flex-shrink: 0;
+  background: var(--darkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 2rem 0;
+  z-index: 1;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0 0;
+
+  button {
+    margin: 0 0.5rem;
+    @media screen and (min-width: 768px) {
+      margin: 0 1rem;
+    }
+    border: none;
+    background: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    svg {
+      width: 3rem;
+      height: 3rem;
+      @media screen and (min-width: 768px) {
+        width: 4rem;
+        height: 4rem;
+      }
+      fill: black;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    &:disabled {
+      cursor: default;
+      &:hover,
+      &:focus {
+        transform: none;
+      }
+      svg {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.songTitle {
+  margin: 1rem 0 2rem 0;
+  font-size: var(--text-big);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

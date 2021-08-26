@@ -1,0 +1,70 @@
+.listWrapper {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, var(--blue) 0%, var(--darkBlue) 100%);
+}
+
+.idleStateText {
+  text-align: center;
+  font-size: var(--text-medium);
+}
+
+.errorStateText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: var(--text-medium);
+}
+
+.songsList {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  list-style-type: none;
+  position: relative;
+  scrollbar-color: white var(--darkBlue);
+
+  &::-webkit-scrollbar {
+    width: auto;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--transparentWhite);
+    border-radius: 50px;
+  }
+}
+
+.loadMoreWrapper {
+  box-sizing: content-box;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 500px;
+  height: 8rem;
+  @media screen and (min-width: 768px) {
+    height: 10rem;
+  }
+  background: var(--transparentWhite);
+  border-bottom: 4px solid black;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.14, 1.35, 0.54, 1.95), background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.05);
+  }
+}
+.loadMoreButton {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-size: var(--text-medium);
+}

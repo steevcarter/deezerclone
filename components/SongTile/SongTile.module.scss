@@ -1,0 +1,87 @@
+.song {
+  box-sizing: content-box;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 500px;
+  height: 8rem;
+  @media screen and (min-width: 768px) {
+    height: 10rem;
+  }
+  background: var(--transparentWhite);
+  border-bottom: 4px solid black;
+  transition: transform 0.2s cubic-bezier(0.14, 1.35, 0.54, 1.95), background-color 0.2s ease-in-out;
+  &:hover,
+  &:focus-within {
+    transform: scale(1.05);
+  }
+
+  button {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+  }
+
+  &.active {
+    background: var(--transparentWhiteActive);
+    transform: scale(1.05);
+  }
+}
+
+.songContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: hidden;
+  padding: 0.5rem 1rem 1rem 0.5rem;
+}
+.songTitle {
+  display: block;
+  font-size: var(--text-big);
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songArtist {
+  font-size: var(--text-medium);
+  font-style: italic;
+}
+
+@keyframes bgPulse {
+  from {
+    background-color: var(--blue);
+  }
+  to {
+    background-color: var(--darkBlue);
+  }
+}
+.songImageWrapper {
+  width: 8rem;
+  height: 8rem;
+  @media screen and (min-width: 768px) {
+    width: 10rem;
+    height: 10rem;
+  }
+  flex-shrink: 0;
+  position: relative;
+  animation: bgPulse 0.5s alternate infinite ease-in-out;
+}
+
+.songImage {
+  width: 100%;
+  height: 100%;
+}
+.noCoverImg {
+  width: 100%;
+  height: 100%;
+  background: var(--darkBlue);
+  font-size: var(--text-small);
+  padding: 1rem;
+  text-align: center;
+}
